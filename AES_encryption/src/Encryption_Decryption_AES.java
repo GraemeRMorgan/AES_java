@@ -1,5 +1,5 @@
 /**
- * Graeme Morgan 
+ * Graeme Morgan, Reece Milliner, Scott Howes
  * CPSC 499 - Computer Security
  * Prof: Saqib Haqaq
  * Mar 5, 2020
@@ -33,11 +33,11 @@ public class Encryption_Decryption_AES {
 			System.out.println("Original Message: \t\t" + value);
 
 			
-			//128 bit Initialisation vector. 
+			//128 bit Initialization vector. 
 			IvParameterSpec vector = new IvParameterSpec(initVector.getBytes("UTF-8"));			
 			//Generate a 128 bit secret key.
 			SecretKeySpec secretKey = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
-			//Generate a cipher using the initialisation vector and the secretKey.
+			//Generate a cipher using the initialization vector and the secretKey.
 			Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
 			cipher.init(Cipher.ENCRYPT_MODE, secretKey, vector);
 			
@@ -59,11 +59,11 @@ public class Encryption_Decryption_AES {
 			 *  be delivered in a non-binary form. Not as important for textual
 			 *  messages, but if you were emailing an encrypted image, it MUST be 
 			 *  encoded to Base64, or other similar ASCII encoding tools. Mail 
-			 *  servers expect ASCII and if they recieve a binary message, the 
+			 *  servers expect ASCII and if they receive a binary message, the 
 			 *  message contents will be corrupted. 
 			 */
 			Base64.Encoder encoder = Base64.getEncoder();
-			//This is done just for demonstation.
+			//This is done just for demonstration.
 			byte[] encoded = encoder.encode(value.getBytes());
 			//This is what we're actually using.
 			byte[] encryptedEncoded = encoder.encode(encrypted);
@@ -103,7 +103,7 @@ public class Encryption_Decryption_AES {
 	public static String decrypt(String encrypted) {
 	    try {
 	    	
-	    	//128 bit Initialization Vector from vector in Encypt Object.
+	    	//128 bit Initialization Vector from vector in Encrypt Object.
 	        IvParameterSpec vector = new IvParameterSpec(initVector.getBytes("UTF-8"));
 	        //Generate the 128 bit secret key.
 	        SecretKeySpec secretKey = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
