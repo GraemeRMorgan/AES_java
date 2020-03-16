@@ -1,18 +1,3 @@
-/**
- * Graeme Morgan, Reece Milliner, Scott Howes
- * CPSC 499 - Computer Security
- * Prof: Saqib Haqaq
- * Mar 5, 2020
- * 
- * The following Class Encrypts/Encodeds and Decrypts/Decodes a String and returns the result
- * as a String. 
- * 
- * REF 1: https://www.javacodegeeks.com/2018/03/aes-encryption-and-decryption-in-javacbc-mode.html
- * REF 1: ACCESSED : Mar, 3, 2020
- * 
- * REF 2: https://www.novixys.com/blog/java-aes-example/
- * REF 2: ACCESSED : Mar, 1, 2020
- */
 
 import java.util.Base64;
 import javax.crypto.Cipher;

@@ -1,9 +1,3 @@
-/**
- * Graeme Morgan, Reece Milliner, Scott Howes
- * CPSC 499 - Computer Security
- * Prof: Saqib Haqaq
- * Mar 5, 2020
- */
 import java.util.Scanner;
 
 public class AES_Example {
@@ -38,5 +32,6 @@ public class AES_Example {
 		} catch (Exception e) {
 			System.out.println("There has been an issue with the Encryption Process, please try again.");
 		}
+		sc.close();
 	}
 }
